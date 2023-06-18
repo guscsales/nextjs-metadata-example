@@ -2,20 +2,6 @@ import { Metadata } from 'next';
 import BlogService from '@/services/blog-service';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  description:
-    'Bem vindo ao meu site, aqui tem uma descrição de até 160 caracteres!',
-  openGraph: {
-    description: 'Quero por uma descrição diferente, ai sim pode usar',
-    images: ['https://placehold.co/1280x768?text=Meus+posts'],
-    authors: ['Gustavo Sales'],
-  },
-  twitter: {
-    description: 'Quero por uma descrição diferente, ai sim pode usar',
-    images: ['https://placehold.co/1280x768?text=Meus+posts'],
-  },
-};
-
 export default async function Home() {
   const posts = await BlogService.fetchPosts();
 
